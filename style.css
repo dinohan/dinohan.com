@@ -65,10 +65,32 @@ button {
   margin: 0 20px 30px 20px;
   font-weight: 800;
 }
-
 #scroll-button {
   position: fixed;
-  bottom: 30px;
+  bottom: 40px;
+  animation-duration: 2s;
+  animation-name: pleaseScroll;
+  animation-iteration-count: infinite;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#scroll-button > i {
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 2.1rem;
+}
+#scroll-button > p {
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 0.9rem;
+}
+@keyframes pleaseScroll {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(50%);
+  }
 }
 
 #placeholder {
@@ -139,6 +161,11 @@ button {
   margin-left: auto;
   margin-right: 30px;
   color: #646eff;
+}
+@media (max-width: 479px) {
+  .source {
+    margin-right: 20px;
+  }
 }
 .source:hover {
   text-decoration: underline;
@@ -230,4 +257,65 @@ button {
 }
 .contacts-body > li > a:hover {
   text-decoration: underline;
+}
+
+.about {
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about-boxes {
+  margin-top: 0px;
+  display: flex;
+  width: 100%;
+  max-width: 1000px;
+  justify-content: space-evenly;
+  flex-flow: wrap;
+}
+.ability {
+  list-style: none;
+  width: 200px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+
+  font-size: 1.2em;
+  font-weight: 600;
+
+  margin-top: 20px;
+
+  border-radius: 15px;
+}
+@media all and (max-width: 479px) {
+  .ability {
+    width: 45%;
+  }
+}
+.ability > * {
+  margin: 15px 0;
+}
+.ability > i {
+  font-size: 3.8rem;
+}
+.ability:hover {
+  background-color: #333;
+}
+.description {
+  width: 90%;
+  max-width: 1000px;
+  background-color: #000;
+  box-shadow: 0 0 15px 10px rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+
+  margin: 20px 0;
+  padding: 20px;
+}
+#des-title {
+  padding: 5px 5px 15px 5px;
+}
+#des-subtitle {
+  margin-bottom: 10px;
 }

@@ -7,6 +7,7 @@
     <script defer src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
     <script defer src="script.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css"></link>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css"
@@ -20,13 +21,46 @@
         <h1>Hi, I&apos;m Dino</h1>
       </div>
       <div id="scroll-button">
-        <i class="fas fa-3x fa-sort-down"></i>
+        <!-- <i class="fas fa-3x fa-sort-down"></i> -->
+        <i class="bi bi-mouse"></i>
+        <p>scroll</p>
       </div>
     </div>
     <div id="placeholder"></div>
 
     <div class="body">
-      <div class="about"></div>
+      <div class="about">
+          <div class="title">About</div>
+          <ul class="about-boxes">
+            <li class="ability" onmouseover="mouseOver(0)">
+              <i class="bi bi-speedometer2"></i>
+              <p>Fast Learning</p>
+            </li>
+            <li class="ability" onmouseover="mouseOver(1)">
+                <i class="bi bi-person-plus"></i>
+              <p>Sociable</p>
+            </li>
+            <li class="ability" onmouseover="mouseOver(2)">
+                <i class="bi bi-droplet-half"></i>
+              <p>Flexible</p>
+            </li>
+            <li class="ability" onmouseover="mouseOver(3)">
+                <i class="bi bi-award"></i>
+              <p>Challenging</p>
+            </li>
+          </ul>
+          <div class="description">
+              <h2 id="des-title">
+                Fast Learning
+              </h2>
+              <div id="des-subtitle">
+                Dino는 빠르게 배웁니다.
+              </div>
+              <div id="des-body">
+                프로젝트를 중심으로 새로운 지식을 습득하고, 문제에 직접 부딪히며 해결책을 찾아갑니다.
+              </div>
+          </div>
+      </div>
       <div class="projects">
         <div class="title">Projects</div>
         <div class="projects-box">
